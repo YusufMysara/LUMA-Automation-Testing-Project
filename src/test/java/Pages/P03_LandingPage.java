@@ -4,7 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 import static TestCases.TestBase.driver;
@@ -47,6 +50,8 @@ public class P03_LandingPage {
         product.findElement(addToCart).click();
     }
     public String cartNumber(){
+        WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(7));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(cartNum)));
         return driver.findElement(cartNum).getText();
     }
 }

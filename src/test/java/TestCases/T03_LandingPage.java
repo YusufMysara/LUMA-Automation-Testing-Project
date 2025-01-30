@@ -2,13 +2,9 @@ package TestCases;
 
 import Pages.P03_LandingPage;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import java.time.Duration;
 import java.util.List;
 
 public class T03_LandingPage extends TestBase{
@@ -47,7 +43,6 @@ public class T03_LandingPage extends TestBase{
         landingPage.selectSizeMedium(landingPage.productsList().get(1));
         landingPage.selectColorYellow();
         landingPage.clickOnAddToCart(landingPage.productsList().get(1));
-        Thread.sleep(2000);
         Assert.assertEquals(landingPage.cartNumber(),"1");
     }
 }
