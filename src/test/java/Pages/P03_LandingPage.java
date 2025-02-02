@@ -13,12 +13,12 @@ import java.util.List;
 import static TestCases.TestBase.driver;
 
 public class P03_LandingPage {
-    By hotSeller = By.xpath("//*[@id=\"maincontent\"]/div[3]/div/div[2]/div[4]/h2");
+    By hotSeller = By.xpath("//h2[@class=\"title\"]");
     By price = By.cssSelector(".price");
     By product = By.className("product-item");
     By addToCart = By.cssSelector(".action.tocart.primary");
-    By sizeM = By.cssSelector("#option-label-size-143-item-168");
-    By colorYellow = By.cssSelector("#option-label-color-93-item-60");
+    By sizeM = By.id("option-label-size-143-item-168");
+    By colorYellow = By.id("option-label-color-93-item-60");
     By cartNum = By.className("counter-number");
 
     public void scroll(){

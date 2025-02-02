@@ -8,7 +8,7 @@ public class P02_Login {
     By signInButtonHPage = By.linkText("Sign In");
     By email = By.id("email");
     By password = By.id("pass");
-    By signIn = By.cssSelector("#send2");
+    By signInButton = By.cssSelector("button[id=\"send2\"]");
     By welcomeFNameLName = By.className("logged-in");
 
     public void clickOnSignInButtonAtHomePage(){
@@ -21,9 +21,14 @@ public class P02_Login {
         driver.findElement(password).sendKeys(pass);
     }
     public void clickOnSignIn(){
-        driver.findElement(signIn).click();
+        driver.findElement(signInButton).click();
     }
     public String welcomeName(){
         return driver.findElement(welcomeFNameLName).getText();
+    }
+    public void login(String email,String password){
+        enterEmail(email);
+        enterPassword(password);
+        clickOnSignIn();
     }
 }

@@ -18,7 +18,6 @@ public class TestBase {
     @BeforeTest
     public void openDriver(){
         driver = new ChromeDriver();
-        driver.manage().window().fullscreen();
     }
     @BeforeMethod
     public void openURL(){

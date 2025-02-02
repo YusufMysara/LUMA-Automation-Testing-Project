@@ -9,7 +9,7 @@ public class P01_Register {
     By firstName = By.id("firstname");
     By lastName = By.id("lastname");
     By email = By.name("email");
-    By password = By.xpath("//*[@id=\"password\"]");
+    By password = By.xpath("//input[@id=\"password\"]");
     By confirmPassword = By.id("password-confirmation");
     By createAccount = By.cssSelector("button[type=\"submit\"][title=\"Create an Account\"]");
     By required_field = By.id("password-confirmation-error");

@@ -12,7 +12,7 @@ import java.util.List;
 import static TestCases.TestBase.driver;
 
 public class P04_Wishlist {
-    By hotSeller = By.xpath("//*[@id=\"maincontent\"]/div[3]/div/div[2]/div[4]/h2");
+    By hotSeller = By.xpath("//h2[@class=\"title\"]");
     By productsList = By.className("product-item");
     By wishlist = By.cssSelector(".action.towishlist");
 

@@ -39,10 +39,11 @@ public class T03_LandingPage extends TestBase{
 //Validate That Guest user can add product to cart
     public void TC3() throws InterruptedException {
         landingPage.scroll();
-        landingPage.hover(landingPage.productsList().get(1));
-        landingPage.selectSizeMedium(landingPage.productsList().get(1));
+        WebElement Breathe_Easy_Tank = landingPage.productsList().get(1);
+        landingPage.hover(Breathe_Easy_Tank);
+        landingPage.selectSizeMedium(Breathe_Easy_Tank);
         landingPage.selectColorYellow();
-        landingPage.clickOnAddToCart(landingPage.productsList().get(1));
+        landingPage.clickOnAddToCart(Breathe_Easy_Tank);
         Assert.assertEquals(landingPage.cartNumber(),"1");
     }
 }

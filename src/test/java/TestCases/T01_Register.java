@@ -8,7 +8,7 @@ public class T01_Register extends TestBase{
     P01_Register register = new P01_Register();
 
     @Test
-    //validate that the confirmation password field is required to proceed
+//Validate an error message is displayed when user leave “Confirm Password” field empty
     public void validateConfirmPassword(){
         register.clickOnCreateAccountButtonAtHomePage();
         Assert.assertEquals(driver.getCurrentUrl(),"https://magento.softwaretestingboard.com/customer/account/create/");
@@ -20,8 +20,9 @@ public class T01_Register extends TestBase{
         register.clickOnCreateAcc();
         Assert.assertEquals("This is a required field.",register.requiredError());
     }
+
     @Test
-    //validate that the password field and confirmation password field must be the same to proceed
+//Validate an error message is displayed when user enter password and confirm password does not match each other
     public void validatePassAndConfirmPass(){
         register.clickOnCreateAccountButtonAtHomePage();
         Assert.assertEquals(driver.getCurrentUrl(),"https://magento.softwaretestingboard.com/customer/account/create/");
@@ -33,8 +34,9 @@ public class T01_Register extends TestBase{
         register.clickOnCreateAcc();
         Assert.assertEquals("Please enter the same value again.",register.requiredError());
     }
+
     @Test
-    //validate that the login function works properly
+//Validate that user after register with valid data, will be navigated to My Account page
     public void validateRegistration(){
         register.clickOnCreateAccountButtonAtHomePage();
         register.enterFName(firstName);
