@@ -1,4 +1,4 @@
-LUMA Automation Testing Project
+h2<LUMA Automation Testing Project>h2
 Overview
 This is an automation testing project designed to validate key functionalities of the LUMA eCommerce website using test cases that cover user registration, login, landing page interactions, and wishlist management.
 
