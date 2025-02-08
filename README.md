@@ -1,7 +1,7 @@
 # LUMA Automation Testing Project  
 
 ## Overview  
-This is an automation testing project designed to validate key functionalities of the **LUMA eCommerce website** using test cases that cover user registration, login, landing page interactions, and wishlist management.  
+This is an automation testing project designed to validate key functionalities of the **LUMA eCommerce website** ([LUMA Demo](https://magento.softwaretestingboard.com/)). The test cases cover **user registration, login, landing page interactions, and wishlist management**.  
 
 ## Technology Stack  
 - **Programming Language:** Java  
@@ -45,3 +45,4 @@ The project follows a structured **Page Object Model (POM)** approach, dividing 
 ### Scenario 4: Wishlist Management  
 ✔️ Guest users cannot add products to the wishlist and are redirected to the login page.  
 ✔️ Logged-in users can successfully add products to the wishlist.  
+
